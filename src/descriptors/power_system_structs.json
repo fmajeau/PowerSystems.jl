@@ -9738,14 +9738,14 @@
                     "name": "states",
                     "exclude_setter": true,
                     "comment": "(**Do not modify.**) The [states](@ref S) are:\n\tψq: q-axis stator flux,\n\tψd: d-axis stator flux,\n\teq_p: q-axis transient voltage,\n\ted_p: d-axis transient voltage\n\tψd_pp: subtransient flux linkage in the d-axis\n\tψq_pp: subtransient flux linkage in the q-axis",
-                    "internal_default": "[:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp]",
+                    "internal_default": "[:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp, :ir_hs, :ii_hs]",
                     "data_type": "Vector{Symbol}"
                 },
                 {
                     "name": "n_states",
                     "exclude_setter": true,
                     "comment": "(**Do not modify.**) SauerPaiMachine has 6 states",
-                    "internal_default": 6,
+                    "internal_default": 8,
                     "data_type": "Int"
                 },
                 {
@@ -14879,14 +14879,14 @@
                     "name": "states",
                     "exclude_setter": true,
                     "comment": "(**Do not modify.**) The [states](@ref S) of the LCLFilter model are:\n\tir_cnv: Real current out of the converter,\n\tii_cnv: Imaginary current out of the converter,\n\tvr_filter: Real voltage at the filter's capacitor,\n\tvi_filter: Imaginary voltage at the filter's capacitor,\n\tir_filter: Real current out of the filter,\n\tii_filter: Imaginary current out of the filter",
-                    "internal_default": "[:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter]",
+                    "internal_default": "[:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter, :ir_hs, :ii_hs]",
                     "data_type": "Vector{Symbol}"
                 },
                 {
                     "name": "n_states",
                     "exclude_setter": true,
                     "comment": "(**Do not modify.**) LCLFilter has 6 states",
-                    "internal_default": 6,
+                    "internal_default": 8,
                     "data_type": "Int"
                 }
             ],

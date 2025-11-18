@@ -60,10 +60,10 @@ mutable struct LCLFilter <: Filter
 end
 
 function LCLFilter(lf, rf, cf, lg, rg, ext=Dict{String, Any}(), )
-    LCLFilter(lf, rf, cf, lg, rg, ext, [:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter], 6, )
+    LCLFilter(lf, rf, cf, lg, rg, ext, [:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter, :ir_hs, :ii_hs], 8, )
 end
 
-function LCLFilter(; lf, rf, cf, lg, rg, ext=Dict{String, Any}(), states=[:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter], n_states=6, )
+function LCLFilter(; lf, rf, cf, lg, rg, ext=Dict{String, Any}(), states=[:ir_cnv, :ii_cnv, :vr_filter, :vi_filter, :ir_filter, :ii_filter, :ir_hs, :ii_hs], n_states=8, )
     LCLFilter(lf, rf, cf, lg, rg, ext, states, n_states, )
 end
 

@@ -108,10 +108,10 @@ mutable struct SauerPaiMachine <: Machine
 end
 
 function SauerPaiMachine(R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext=Dict{String, Any}(), )
-    SauerPaiMachine(R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext, (Xd_pp-Xl)/(Xd_p-Xl), (Xq_pp-Xl)/(Xq_p-Xl), (Xd_p - Xd_pp) / (Xd_p - Xl)^2, (Xq_p - Xq_pp) / (Xq_p - Xl)^2, [:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp], 6, InfrastructureSystemsInternal(), )
+    SauerPaiMachine(R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext, (Xd_pp-Xl)/(Xd_p-Xl), (Xq_pp-Xl)/(Xq_p-Xl), (Xd_p - Xd_pp) / (Xd_p - Xl)^2, (Xq_p - Xq_pp) / (Xq_p - Xl)^2, [:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp, :ir_hs, :ii_hs], 8, InfrastructureSystemsInternal(), )
 end
 
-function SauerPaiMachine(; R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext=Dict{String, Any}(), γ_d1=(Xd_pp-Xl)/(Xd_p-Xl), γ_q1=(Xq_pp-Xl)/(Xq_p-Xl), γ_d2=(Xd_p - Xd_pp) / (Xd_p - Xl)^2, γ_q2=(Xq_p - Xq_pp) / (Xq_p - Xl)^2, states=[:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp], n_states=6, internal=InfrastructureSystemsInternal(), )
+function SauerPaiMachine(; R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext=Dict{String, Any}(), γ_d1=(Xd_pp-Xl)/(Xd_p-Xl), γ_q1=(Xq_pp-Xl)/(Xq_p-Xl), γ_d2=(Xd_p - Xd_pp) / (Xd_p - Xl)^2, γ_q2=(Xq_p - Xq_pp) / (Xq_p - Xl)^2, states=[:ψq, :ψd, :eq_p, :ed_p, :ψd_pp, :ψq_pp, :ir_hs, :ii_hs], n_states=8, internal=InfrastructureSystemsInternal(), )
     SauerPaiMachine(R, Xd, Xq, Xd_p, Xq_p, Xd_pp, Xq_pp, Xl, Td0_p, Tq0_p, Td0_pp, Tq0_pp, ext, γ_d1, γ_q1, γ_d2, γ_q2, states, n_states, internal, )
 end
 
